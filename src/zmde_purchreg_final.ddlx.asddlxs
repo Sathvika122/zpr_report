@@ -1,0 +1,119 @@
+
+@Metadata.layer: #CORE
+
+annotate view ZC_PURCHREG_FINAL with
+{
+  @UI.facet: [
+    {
+      id: 'DocumentDetails',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Document Details',
+      position: 10
+    },
+    {
+      id: 'SupplierDetails',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Supplier',
+      label: 'Supplier & Product Details',
+      position: 20
+    },
+    {
+      id: 'AmountDetails',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Amounts',
+      label: 'Amount & Tax Details',
+      position: 30
+    }
+  ]
+
+  // Document Details
+
+  @UI.lineItem: [{ position: 10, label: 'Source Ledger' }]
+  @UI.identification: [{ position: 10, label: 'Source Ledger' }]
+  @UI.selectionField: [{ position: 10 }]
+  SourceLedger;
+
+  @UI.lineItem: [{ position: 20, label: 'Ledger' }]
+  @UI.identification: [{ position: 20, label: 'Ledger' }]
+  @UI.selectionField: [{ position: 20 }]
+  Ledger;
+
+  @UI.lineItem: [{ position: 30, label: 'Company Code' }]
+  @UI.identification: [{ position: 30, label: 'Company Code' }]
+  @UI.selectionField: [{ position: 30 }]
+  CompanyCode;
+
+  @UI.lineItem: [{ position: 40, label: 'Fiscal Year' }]
+  @UI.identification: [{ position: 40, label: 'Fiscal Year' }]
+  @UI.selectionField: [{ position: 40 }]
+  FiscalYear;
+
+  @UI.lineItem: [{ position: 50, label: 'Accounting Document' }]
+  @UI.identification: [{ position: 50, label: 'Accounting Document' }]
+  AccountingDocument;
+
+  @UI.lineItem: [{ position: 60, label: 'Posting Date' }]
+  @UI.identification: [{ position: 60, label: 'Posting Date' }]
+  @UI.selectionField: [{ position: 50 }]
+  PostingDate;
+
+  // Supplier & Product Details
+
+  @UI.lineItem: [{ position: 70, label: 'Supplier' }]
+  @UI.fieldGroup: [{ qualifier: 'Supplier', position: 10, label: 'Supplier' }]
+  @UI.selectionField: [{ position: 40 }]
+  Supplier;
+
+  @UI.lineItem: [{ position: 80, label: 'Supplier Name' }]
+  @UI.fieldGroup: [{ qualifier: 'Supplier', position: 20, label: 'Supplier Name' }]
+  SupplierFullName;
+
+  @UI.lineItem: [{ position: 90, label: 'GST Number' }]
+  @UI.fieldGroup: [{ qualifier: 'Supplier', position: 30, label: 'GST Number' }]
+  gst_number;
+
+  @UI.lineItem: [{ position: 100, label: 'Product' }]
+  @UI.fieldGroup: [{ qualifier: 'Supplier', position: 40, label: 'Product' }]
+  Product;
+
+  @UI.lineItem: [{ position: 110, label: 'Product Name' }]
+  @UI.fieldGroup: [{ qualifier: 'Supplier', position: 50, label: 'Product Name' }]
+  ProductName;
+
+  @UI.lineItem: [{ position: 120, label: 'HSN/SAC Code' }]
+  @UI.fieldGroup: [{ qualifier: 'Supplier', position: 60, label: 'HSN/SAC Code' }]
+  IN_HSNOrSACCode;
+
+  @UI.lineItem: [{ position: 130, label: 'Quantity' }]
+  @UI.fieldGroup: [{ qualifier: 'Supplier', position: 70, label: 'Quantity' }]
+  Quantity;
+
+  // Amount & Tax Details
+
+  @UI.lineItem: [{ position: 140, label: 'Amount in Company Code Currency' }]
+  @UI.fieldGroup: [{ qualifier: 'Amounts', position: 10, label: 'Amount in Company Code Currency' }]
+  AmountInCompanyCodeCurrency;
+
+  @UI.lineItem: [{ position: 150, label: 'Expense Amount' }]
+  @UI.fieldGroup: [{ qualifier: 'Amounts', position: 20, label: 'Expense Amount' }]
+  ExpenseAmount;
+
+  @UI.lineItem: [{ position: 160, label: 'CGST Amount' }]
+  @UI.fieldGroup: [{ qualifier: 'Amounts', position: 30, label: 'CGST Amount' }]
+  CGSTAmount;
+
+  @UI.lineItem: [{ position: 170, label: 'SGST Amount' }]
+  @UI.fieldGroup: [{ qualifier: 'Amounts', position: 40, label: 'SGST Amount' }]
+  SGSTAmount;
+
+  @UI.lineItem: [{ position: 180, label: 'IGST Amount' }]
+  @UI.fieldGroup: [{ qualifier: 'Amounts', position: 50, label: 'IGST Amount' }]
+  IGSTAmount;
+
+  @UI.lineItem: [{ position: 190, label: 'Net Amount' }]
+  @UI.fieldGroup: [{ qualifier: 'Amounts', position: 60, label: 'Net Amount' }]
+  NetAmount;
+}

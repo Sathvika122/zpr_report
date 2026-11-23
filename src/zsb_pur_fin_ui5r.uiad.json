@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Custom Purchase Register(KG & KR)",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Custom Purchase Register(KG & KR)"
+  },
+  "ui5AppDetails": {
+    "appId": "zsb_purchreg_final_v2"
+  },
+  "navigation": {
+    "targetMappingId": "ZSB_PUR_FIN_UI5R_TM",
+    "semanticObject": "ZSB_PURCHREG_FINAL_V2",
+    "action": "ZSB_PURCHREG_FINAL_V2",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZSB_PUR_FIN_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Custom Purchase Register(KG & KR)"
+      }
+    }
+  ]
+}

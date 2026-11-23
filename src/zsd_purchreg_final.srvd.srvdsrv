@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination'
+define service ZSD_PURCHREG_FINAL {
+  expose ZC_PURCHREG_FINAL as PurchaseRegister;
+}
